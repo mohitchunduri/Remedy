@@ -15,9 +15,8 @@ const defaultChips = [
 const statusMessages = {
   empty: "Tell me what is going on and I will help.",
   "not-configured":
-    "AI responses are not enabled yet. Add your API key to continue.",
-  "not-implemented":
-    "AI wiring is not set up yet. A backend developer can plug it in.",
+    "AI responses are not enabled yet. Set GEMINI_API_KEY to continue.",
+  error: "I had trouble reaching the AI just now. Please try again.",
 };
 
 function createMessage(role, text, stampText) {
