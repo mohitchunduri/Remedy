@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Remedy - Gentle Care Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">R</div>
+          <div>
+            <p class="brand-name">Remedy</p>
+            <p class="brand-tag">Warm guidance for non-emergency care</p>
+          </div>
+        </div>
+        <div class="status">
+          <span class="dot"></span>
+          <span>Session active</span>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Natural remedies first</p>
+            <h1>Gentle care, guided with empathy.</h1>
+            <p class="lead">
+              Share what you are feeling, and Remedy will ask a few
+              supportive questions. You will get clear, calm steps focused on
+              hydration, warmth, rest, and comfort before any OTC options.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>How it helps</h3>
+              <ul>
+                <li>Sorts symptoms into safe, non-diagnostic categories.</li>
+                <li>Asks only relevant follow-up questions.</li>
+                <li>Suggests home care steps in a simple order.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Natural care steps</h3>
+              <ul>
+                <li>Warm liquids, hydration, and gentle foods.</li>
+                <li>Steam, humidifiers, and saltwater gargles.</li>
+                <li>Rest, light movement, and calm routines.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="safety">
+            <h3>Red flag check</h3>
+            <p>
+              If you have trouble breathing, chest pain, severe dizziness,
+              confusion, or signs of dehydration, seek medical help.
+            </p>
+          </div>
+        </section>
+
+        <section class="chat-panel">
+          <div class="chat-header">
+            <div>
+              <h2>Remedy chat</h2>
+              <p>Comfort-focused guidance with opt-in check-ins.</p>
+            </div>
+            <div class="controls">
+              <button class="ghost" id="clear-btn" type="button">Clear chat</button>
+              <button class="primary" id="complete-btn" type="button">Send COMPLETED</button>
+            </div>
+          </div>
+
+          <div id="chat-log" class="chat-log" aria-live="polite">
+            <div class="message assistant">
+              <div class="bubble">
+                <p>Hi, I am Remedy. I can help with gentle, non-emergency care and natural remedies first. Tell me what you are feeling, and I will ask only what matters.</p>
+              </div>
+              <span class="stamp">Assistant</span>
+            </div>
+          </div>
+
+          <div class="chips" id="chip-row">
+            <button class="chip" data-text="I have a sore throat and congestion.">Sore throat + congestion</button>
+            <button class="chip" data-text="I am exhausted and low energy.">Low energy</button>
+            <button class="chip" data-text="I feel nauseous and my stomach is upset.">Upset stomach</button>
+            <button class="chip" data-text="My allergies are flaring up.">Allergy flare</button>
+          </div>
+
+          <form id="chat-form" class="chat-form" autocomplete="off">
+            <label class="sr-only" for="message">Message</label>
+            <input
+              id="message"
+              name="message"
+              type="text"
+              placeholder="Tell me how you are feeling..."
+              required
+            />
+            <button type="submit" class="send">Send</button>
+          </form>
+
+          <div class="footnote">
+            <p>
+              Remedy is a supportive wellness companion and does not provide
+              medical diagnosis. For emergencies, contact local services.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      window.REMEDY_WELCOME =
+        "Hi, I am Remedy. I can help with gentle, non-emergency care and natural remedies first. Tell me what you are feeling, and I will ask only what matters.";
+    </script>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>
